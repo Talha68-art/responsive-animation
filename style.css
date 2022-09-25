@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#parent{
+    display: flex;
+    flex-direction: row;
+    background-color: lightgreen;
+    height: 50vh;
+    /* justify-content: center; */
+    text-align: center;
+    
+}
+
+.child-1{
+    background-color: aqua;
+    padding: 10px;
+}
+
+.child-2{
+    background-color: rgb(70, 131, 187);
+    padding: 10px;
+}
+
+.child-3{
+    background-color: rgb(106, 61, 147);
+    padding: 10px;
+}
+
+#chat-icon {
+    height: 50px;
+    width: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    #parent {
+        flex-direction: column
+    }
+    .child-1 {
+        background-color: orange
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    #parent {
+        flex-direction: column;
+    }
+    .child-2{
+        background-color: blue;
+        height: 20vh;
+        
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    #parent{
+        flex-direction: column;
+    }
+    .child-3{
+        background-color: blueviolet;
+        height: 30vh;
+    }
+}
+
+.animation{
+    height: 50vh;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: blinker;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes blinker {
+    0%{
+        background-color: aqua;
+        color: black;
+    }
+
+    25%{
+        background-color: rgb(45, 17, 98);
+        color: black;
+    }
+
+    50%{
+        background-color: rgb(61, 179, 46);
+    }
+    75%{
+        background-color: rgb(97, 33, 81);
+    }
+
+    100%{
+        background-color: rgb(219, 75, 75);
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .animation{
+        flex-direction: column;
+        height: 50vh;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .animation {
+        flex-direction: column;
+        height: 40vh;
+    }
+    
+
+@media screen and (max-width: 400px) {
+    .animation{
+        flex-direction: column;
+        height: auto;
+        font-size: 15px;
+    }
+    
+}
